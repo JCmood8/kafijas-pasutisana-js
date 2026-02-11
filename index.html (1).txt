@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Kafijas Pasūtīšana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>Kafijas Pasūtīšana</h1>
+
+
+<p>Izvēlies savu iecienītāko kafiju un izmēru, lai redzētu cenu.</p>
+
+
+<div class="container">
+
+
+    <label for="coffeeType">Izvēlies kafiju:</label>
+    <select id="coffeeType">
+        <option value="2.00">Espresso - 2.00€</option>
+        <option value="2.50">Latte - 2.50€</option>
+        <option value="3.00">Cappuccino - 3.00€</option>
+    </select>
+
+
+    <label for="size">Izvēlies izmēru:</label>
+    <select id="size">
+        <option value="1">Mazs</option>
+        <option value="1.5">Vidējs (+0.50€)</option>
+        <option value="2">Liels (+1.00€)</option>
+    </select>
+
+
+    <br><br>
+
+
+    <button id="orderBtn">Aprēķināt cenu</button>
+
+
+    <h2 id="result"></h2>
+
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

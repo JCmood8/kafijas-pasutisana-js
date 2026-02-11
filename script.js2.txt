@@ -1,0 +1,35 @@
+﻿const orderBtn = document.getElementById("orderBtn");
+
+
+orderBtn.addEventListener("click", calculatePrice);
+
+
+function calculatePrice() {
+
+
+    const coffeePrice = parseFloat(document.getElementById("coffeeType").value);
+    const sizeExtra = parseFloat(document.getElementById("size").value);
+    const result = document.getElementById("result");
+
+
+    if (isNaN(coffeePrice) || isNaN(sizeExtra)) {
+        result.textContent = "Lūdzu, izvēlies kafiju un izmēru!";
+        result.style.color = "red";
+        return;
+    }
+
+
+    let totalPrice = coffeePrice + sizeExtra;
+
+
+    // Atlaide ja cena pārsniedz 5€
+    if (totalPrice > 5) {
+        totalPrice = totalPrice * 0.9;
+        result.textContent = "Cena ar 10% atlaidi: " + totalPrice.toFixed(2) + " €";
+    } else {
+        result.textContent = "Kopējā cena: " + totalPrice.toFixed(2) + " €";
+    }
+
+
+    result.style.color = "green";
+}
